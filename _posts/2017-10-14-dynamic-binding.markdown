@@ -16,7 +16,7 @@ categories: programming
 
 举个例子：
 
-{% highlight C++ linenos %}
+{% highlight C++ %}
 #include <iostream>
 using namespace std;
 
