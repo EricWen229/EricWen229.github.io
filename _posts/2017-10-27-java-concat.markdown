@@ -124,7 +124,7 @@ private static String ConcatArray(String[] values, int totalLength) {
 
 让我们再来看看`StringBuilder`的实现。
 
-使用JD-GUI反编译JRE中的包，查看`StringBuilder`的实现，可以发现：
+使用[JD-GUI](http://jd.benow.ca)反编译JRE中的包，查看`StringBuilder`的实现，可以发现：
 
 * `StringBuilder`初始化内存空间是有冗余的，也就是说，其会预先分配稍多一些的内存来减少未来拼接字符串可能导致的内存重新分配；
 * 当用完已分配的内存空间后，`StringBuilder`会尝试分配一块约等于当前两倍大的内存空间（不考虑整型溢出的情况，若还是不够，则分配刚刚足够的大小）。
@@ -137,3 +137,5 @@ private static String ConcatArray(String[] values, int totalLength) {
 再次恳请读者注意，这是站在**Java实现者**的角度去说的。对于使用Java的编程者来说，在合适的场景下，`StringBuilder`是好的（例如一个服务器程序，不时接收来自客户端的数据并按要求拼接成一个长字符串）。而对于Java实现者，这个问题意味的是为这么一个表达式生成怎样的代码，那么使用`StringBuilder`其实并不高效。
 
 至于个中原因，也许设计者有其他的考虑，也许仅仅是实现者偷了个懒（像我们写编译原理那个编译器一样），具体不得而知了。
+
+P.S. 这个话题来源于微博用户[@老赵](http://weibo.com/jeffz)发起的讨论
