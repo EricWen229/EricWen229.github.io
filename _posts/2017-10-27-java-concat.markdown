@@ -78,7 +78,7 @@ public static void main(java.lang.String[]);
 
 <br />
 
-然而，对于**Java的实现者**来说，使用`StringBuilder`实现字符串拼接仍然是**相当低效的**。在单个表达式中，字符串的**数目已经确定**了，那么完全有更高效的办法完成字符串拼接，例如C#中实现的（后文有对代码的介绍，可以不必阅读代码）：
+然而，对于**Java的实现者**来说，使用`StringBuilder`实现字符串拼接仍然是**相当低效的**。在单个表达式中，字符串的**数目已经确定**了，那么完全有更高效的办法完成字符串拼接，例如[C#](http://referencesource.microsoft.com/#mscorlib/system/string.cs)中实现的（后文有对代码的介绍，可以不必阅读代码）：
 
 {% highlight C# %}
 public static String Concat(params Object[] args) {
