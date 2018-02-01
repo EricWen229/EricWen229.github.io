@@ -2,7 +2,7 @@
 layout: post
 title:  "hello, world"
 date: 2017-10-13 15:20:39 +0800
-categories: default
+categories: personal
 ---
 好久都没有写东西了。
 

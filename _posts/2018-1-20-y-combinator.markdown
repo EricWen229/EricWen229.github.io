@@ -2,7 +2,7 @@
 layout: post
 title: 'Y组合子的推导（Python表示）'
 date: 2018-1-20 17:56:23 +0800
-categories: default
+categories: programming
 ---
 
 
